@@ -1,0 +1,65 @@
+<!-- src/app/hero/hero.component.html -->
+<header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/image/logo.png" alt="Hoyert Logo">
+        <!-- <a href="#"></a> -->
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <button mat-button [matMenuTriggerFor]="menu">Home</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item [class.selected]="selectedItem === 'home'" (click)="selectItem('home')">About Us</button>
+          </mat-menu>
+            <button mat-menu-item [matMenuTriggerFor]="subMenu">Services</button>
+            <mat-menu #subMenu="matMenu">
+              <button mat-menu-item [class.selected]="selectedItem === 'project1'" (click)="selectItem('project1')">EPC </button>
+              <button mat-menu-item [class.selected]="selectedItem === 'project2'" (click)="selectItem('project2')">Project 2</button>
+            </mat-menu>
+          
+            <button mat-menu-item [matMenuTriggerFor]="subMenu">Projects</button>
+            <mat-menu #subMenu="matMenu">
+              <button mat-menu-item [class.selected]="selectedItem === 'project1'" (click)="selectItem('project1')">Project 1</button>
+              <button mat-menu-item [class.selected]="selectedItem === 'project2'" (click)="selectItem('project2')">Project 2</button>
+            </mat-menu>
+    
+
+          <a href="#" [class.selected]="selectedItem === 'contact'" (click)="selectItem('contact')">Contact Us</a>
+          <a href="#" [class.selected]="selectedItem === 'language'" (click)="selectItem('language')">
+            <img src="path/to/language-icon.png" alt="Language">
+            Language
+          </a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="hero-content">
+      <h1>VARTEC</h1>
+      <p>Design, development, EPC, operation and maintenance of solar PV-systems (solar parks, carpots, floating ) and Battery Storage systems</p>
+    </div>
+  </section>
+
+  <section class="about-us">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>VARTEC has been supplying the most advanced solutions for large-scale solar PV installations for over 10 years in the UK and The Netherlands. With our extensive experience and a team of internal and external consultants and contractors, VARTEC is the ideal partner for designing, building and operating solar parks, carports, battery storage systems and electric vehicle charging. 
+            Every project starts with a detailed analysis before we make an offer that perfectly suits your needs.
+            
+            We combine our professional services with the latest technologies and products available on the market. 
+            
+            We can help you with design services, full EPC (Engineering, Procurement & Construction) or EPC-Lite, and/or bespoke services such as project management, construction management, operation and maintenance and fault-finding. We also have our own portfolio of projects.
+            </p>
+     
+      </div>
+      <div class="about-video">
+        <video id="aboutVideo" controls autoplay>
+          <source src="assets/video/video1.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  
+  </section>
